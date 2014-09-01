@@ -15,4 +15,6 @@ Here's how you can compile the example file:
 
 gcc -O3 wavetrack.c pitchTracker.c -o pitchTracker -lasound -lm
 
+------------------------------------------------------------
+
 Copyright Antonio Cardace 2014, ichigo663@gmail.com
