@@ -127,8 +127,8 @@ static double __compute_pitch(double *approx,unsigned int samplecount, unsigned 
 
       /* perform the FLWT */
       curr_sample_number /= 2;
-      for(j=1; j<=curr_sample_number ; j++){
-         approx[j] = ( approx[2*j -1] + approx[2*j] )/2;
+      for(j=0; j<=curr_sample_number ; j++){
+         approx[j] = ( approx[2*j] + approx[2*j + 1] )/2;
       }
 
       /*now store the first maxima and minima after each zero-crossing, only store them if they respect the delta rule (above)
@@ -144,7 +144,7 @@ static double __compute_pitch(double *approx,unsigned int samplecount, unsigned 
       zero_crossed = 1; //zero crossing test
       too_close = 0; // keep tracks of how many samples must not be taken into considerations ( max/min finding ) because of the delta
 
-      for( j=1 ; j< curr_sample_number-1 ; j++ ){
+      for( j=1 ; j< curr_sample_number ; j++ ){
          sign_test = approx[j] - approx[j-1];
 
          if( prev_sign_test >= 0 && sign_test < 0 ){
