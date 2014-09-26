@@ -20,4 +20,4 @@ Here's how you can compile the example file:
 
 ------------------------------------------------------------
 
-Copyright **Antonio Cardace** 2014, ichigo663@gmail.com
+Copyright **Antonio Cardace** 2014, anto.cardace@gmail.com
