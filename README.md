@@ -18,6 +18,13 @@ Here's how you can compile the example file:
 
 `gcc -O3 wavetrack.c pitchTracker.c -o pitchTracker -lasound -lm`
 
+Here's how you can create a shared library:
+
+`make`
+
+##Install
+A package called wavetrack-git is available in the ArchLinux AUR, you can install it with yaourt.
+
 ------------------------------------------------------------
 
 Copyright **Antonio Cardace** 2014, anto.cardace@gmail.com
