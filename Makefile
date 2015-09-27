@@ -7,6 +7,7 @@ SONAME = ${SOREALNAME}.1
 TARGET_LIB = ${SONAME}.0.1 # target lib
 DESTDIR = bin
 LIBPATH = lib
+HEADEFILE = wavetrack.h
 
 SRCS = wavetrack.c # source files
 OBJS = $(SRCS:.c=.o)
@@ -28,7 +29,9 @@ clean:
 
 install:
 	 @-mkdir -p ${DESTDIR}/usr/${LIBPATH}
+	 @-mkdir -p ${DESTDIR}/usr/include
 	 @-install -Dm755 ${TARGET_LIB} ${DESTDIR}/usr/${LIBPATH}
 	 @-ln -s ${TARGET_LIB} ${SONAME}
 	 @-ln -s ${TARGET_LIB} ${SOREALNAME}
 	 @-mv ${SONAME} ${SOREALNAME} ${DESTDIR}/usr/${LIBPATH}
+	 @-install -Dm644 ${HEADEFILE} ${DESTDIR}/usr/include
