@@ -25,8 +25,7 @@ Here's how you can create a shared library:
 ##Install
 You can install the shared library with the following commands:
 
-`sudo make DESTDIR="/" install`
-`ldconfig`
+`sudo make DESTDIR="/" install && ldconfig`
 
 For Archlinux users:
 A package called wavetrack-git is available in the ArchLinux AUR, you can install it with yaourt.
