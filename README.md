@@ -18,6 +18,10 @@ Here's how you can compile the example file:
 
 `gcc -O3 wavetrack.c pitchTracker.c -o pitchTracker -lasound -lm`
 
+Or if you have installed the shared library:
+
+`gcc -O3 pitchTracker.c -lasound -lm -lwavetrack`
+
 Here's how you can create a shared library:
 
 `make`
