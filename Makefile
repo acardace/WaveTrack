@@ -27,7 +27,8 @@ clean:
 	 -${RM} ${TARGET_LIB} ${OBJS} $(SRCS:.c) ${DESTDIR}
 
 install:
-	 mkdir -p ${DESTDIR}/usr/${LIBPATH}
-	 install -Dm755 ${TARGET_LIB} ${DESTDIR}/usr/${LIBPATH}
-	 ln -s ${DESTDIR}/usr/${LIBPATH}/${TARGET_LIB} ${SONAME}
-	 ln -s ${DESTDIR}/usr/${LIBPATH}/${TARGET_LIB} ${SOREALNAME}
+	 @-mkdir -p ${DESTDIR}/usr/${LIBPATH}
+	 @-install -Dm755 ${TARGET_LIB} ${DESTDIR}/usr/${LIBPATH}
+	 @-ln -s ${TARGET_LIB} ${SONAME}
+	 @-ln -s ${TARGET_LIB} ${SOREALNAME}
+	 @-mv ${SONAME} ${SOREALNAME} ${DESTDIR}/usr/${LIBPATH}
