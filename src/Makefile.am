@@ -1,4 +1,4 @@
-AM_CFLAGS = -I$(srcdir)/../include
+AM_CFLAGS=-I$(srcdir)/../include
 
 noinst_PROGRAMS =
 if WANT_EXAMPLE
