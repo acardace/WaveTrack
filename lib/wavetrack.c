@@ -20,7 +20,7 @@
 #include<math.h>
 #include<stdlib.h>
 #include<unistd.h>
-#include"wavetrack.h"
+#include<wavetrack.h>
 #include<string.h>
 
 /* definition of the struct containing the algorithm parameters */

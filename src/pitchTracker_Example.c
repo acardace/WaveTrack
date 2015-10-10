@@ -6,7 +6,7 @@
 #include<time.h>
 #include<unistd.h>
 #include<math.h>
-#include"wavetrack.h"
+#include<wavetrack.h>
 #include<alsa/asoundlib.h>
 
 #define BUFSIZE 2048
