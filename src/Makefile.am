@@ -1,4 +1,4 @@
-AM_CFLAGS = -I$(srcdir)../include
+AM_CFLAGS = -I$(srcdir)/../include
 
 noinst_PROGRAMS =
 if WANT_EXAMPLE
@@ -6,5 +6,5 @@ if WANT_EXAMPLE
 endif
 
 pitchTracker_SOURCES = pitchTracker_Example.c
-pitchTracker_LDADD = ../lib/libwavetrack.la
+pitchTracker_LDADD = $(srcdir)/../lib/libwavetrack.la
 pitchTracker_LDFLAGS = -lasound
